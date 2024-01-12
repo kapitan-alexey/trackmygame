@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://127.0.0.1:8000/game-page/46/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="./Track My Game_files/style.css">
+    <title>Track My Game</title>
+    
+<style type="text/css">.vue-slider-dot{position:absolute;-webkit-transition:all 0s;transition:all 0s;z-index:5}.vue-slider-dot:focus{outline:none}.vue-slider-dot-tooltip{position:absolute;visibility:hidden}.vue-slider-dot-hover:hover .vue-slider-dot-tooltip,.vue-slider-dot-tooltip-show{visibility:visible}.vue-slider-dot-tooltip-top{top:-10px;left:50%;-webkit-transform:translate(-50%,-100%);transform:translate(-50%,-100%)}.vue-slider-dot-tooltip-bottom{bottom:-10px;left:50%;-webkit-transform:translate(-50%,100%);transform:translate(-50%,100%)}.vue-slider-dot-tooltip-left{left:-10px;top:50%;-webkit-transform:translate(-100%,-50%);transform:translate(-100%,-50%)}.vue-slider-dot-tooltip-right{right:-10px;top:50%;-webkit-transform:translate(100%,-50%);transform:translate(100%,-50%)}</style><style type="text/css">.vue-slider-marks{position:relative;width:100%;height:100%}.vue-slider-mark{position:absolute;z-index:1}.vue-slider-ltr .vue-slider-mark,.vue-slider-rtl .vue-slider-mark{width:0;height:100%;top:50%}.vue-slider-ltr .vue-slider-mark-step,.vue-slider-rtl .vue-slider-mark-step{top:0}.vue-slider-ltr .vue-slider-mark-label,.vue-slider-rtl .vue-slider-mark-label{top:100%;margin-top:10px}.vue-slider-ltr .vue-slider-mark{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.vue-slider-ltr .vue-slider-mark-step{left:0}.vue-slider-ltr .vue-slider-mark-label{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.vue-slider-rtl .vue-slider-mark{-webkit-transform:translate(50%,-50%);transform:translate(50%,-50%)}.vue-slider-rtl .vue-slider-mark-step{right:0}.vue-slider-rtl .vue-slider-mark-label{right:50%;-webkit-transform:translateX(50%);transform:translateX(50%)}.vue-slider-btt .vue-slider-mark,.vue-slider-ttb .vue-slider-mark{width:100%;height:0;left:50%}.vue-slider-btt .vue-slider-mark-step,.vue-slider-ttb .vue-slider-mark-step{left:0}.vue-slider-btt .vue-slider-mark-label,.vue-slider-ttb .vue-slider-mark-label{left:100%;margin-left:10px}.vue-slider-btt .vue-slider-mark{-webkit-transform:translate(-50%,50%);transform:translate(-50%,50%)}.vue-slider-btt .vue-slider-mark-step{top:0}.vue-slider-btt .vue-slider-mark-label{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.vue-slider-ttb .vue-slider-mark{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.vue-slider-ttb .vue-slider-mark-step{bottom:0}.vue-slider-ttb .vue-slider-mark-label{bottom:50%;-webkit-transform:translateY(50%);transform:translateY(50%)}.vue-slider-mark-label,.vue-slider-mark-step{position:absolute}</style><style type="text/css">.vue-slider{position:relative;-webkit-box-sizing:content-box;box-sizing:content-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:block;-webkit-tap-highlight-color:rgba(0,0,0,0)}.vue-slider-rail{position:relative;width:100%;height:100%;-webkit-transition-property:width,height,left,right,top,bottom;transition-property:width,height,left,right,top,bottom}.vue-slider-process{position:absolute;z-index:1}</style><style>@import url("chrome-extension://embopepfkojckgmldidcjbefilokcgmg/content/styles.css");</style></head>
+<body>
+    
+    <div class="navbar">
+<div style="margin: 0 0 10px 0; padding: 10px; background: #2ea44f;">
+<div class="logo">
+<a href="http://127.0.0.1:8000/">
+<span>TMG</span>
+</a>
+</div>
+<span><a href="http://127.0.0.1:8000/start-game">начать игру</a></span>
+</div>
+</div>
+
+    
+
+
+<link rel="stylesheet" type="text/css" href="./Track My Game_files/game-page.css">
+
+
+
+<table style="width: 100%; text-align: center;">
+  <tbody><tr><td><div class="turn-message">Alexey, твой ход!</div></td></tr>
+  <tr><td><span class="service-message"></span></td></tr>
+</tbody></table>
+
+<div style="margin-top: 10px; width: 80%; margin: auto">
+  <div class="jumbotron text-center">
+
+<table style="table-layout:fixed; width: 100%">
+
+  <tbody><tr>
+    <td style="width: 5%"></td>
+    <td style="width: 90%; text-align: center;">
+      <div class="timer">
+      <div>
+      <span class="minutes">00</span>:<span class="seconds">00</span>
+      </div>
+    </div>
+    </td>
+    <td style="width: 5%"></td>
+  </tr>
+  <tr>
+    <td style="width: 5%"></td>
+    <td style="width: 90%; text-align: center;">
+        <button class="btn btn-lg btn-success button-start" data-action="start">Начать ход</button>
+    </td>
+    <td style="width: 5%"></td>
+  </tr>
+  <tr>
+    <td style="width: 5%"></td>
+    <td style="width: 90%; text-align: center;">
+        <button class="btn btn-lg btn-warning button-pause" data-action="pause">Пауза</button>
+        <button class="btn finish-game button-finish" data-action="finish">Закончить<br>игру</button>
+    </td>
+    <td style="width: 5%"></td>
+  </tr>
+  <tr>
+    <td style="width: 5%"></td>
+    <td style="width: 90%; text-align: center;">
+      
+    </td>
+    <td style="width: 5%"></td>
+  </tr>
+
+</tbody></table>
+</div>            
+</div>
+
+
+<div class="players">
+
+  <table border="0" class="player-results">
+    <tbody><tr>
+      <td style="width: 40%;">
+        &nbsp;
+      </td>
+      <td style="width: 30%;">
+        <div class="header">прошлый ход</div>
+      </td>
+      <td style="width: 30%;">
+        <div class="header">общее время</div>
+      </td>
+    </tr>
+  
+  
+    <tr class="active">
+      
+      <td style="width: 40%;">
+        <div id="80" class="player-block">Alexey</div>
+      </td>
+      <td class="last" style="width: 30%;"><div class="last-time">hello</div></td>
+      <td style="width: 30%;"><div class="total-time"></div></td>
+    </tr>
+      
+  
+    <tr>
+      
+      <td style="width: 40%;">
+        <div id="81" class="player-block">Alexander</div>
+      </td>
+      <td class="last" style="width: 30%;"><div class="last-time"></div></td>
+      <td style="width: 30%;"><div class="total-time"></div></td>
+    </tr>
+      
+  
+    <tr>
+      
+      <td style="width: 40%;">
+        <div id="82" class="player-block">Michal</div>
+      </td>
+      <td class="last" style="width: 30%;"><div class="last-time"></div></td>
+      <td style="width: 30%;"><div class="total-time"></div></td>
+    </tr>
+      
+  
+    <tr>
+      
+      <td style="width: 40%;">
+        <div id="83" class="player-block">Danila</div>
+      </td>
+      <td class="last" style="width: 30%;"><div class="last-time"></div></td>
+      <td style="width: 30%;"><div class="total-time"></div></td>
+    </tr>
+      
+  </tbody></table>
+
+</div>
+
+<script src="./Track My Game_files/game-page.js"></script>
+
+
+
+
+</body><div class="troywell-avia"><template shadowrootmode="open">
+        <style>@import url("chrome-extension://embopepfkojckgmldidcjbefilokcgmg/content/styles.css");</style>
+        <div id="troywell-avia" data-v-app=""><div class="app"><div data-v-1062ff19=""><!----></div></div></div></template></div><div class="troywell-caa"><template shadowrootmode="open">
+    <style>
+    @import url("chrome-extension://embopepfkojckgmldidcjbefilokcgmg/content/styles.css");
+    @import url("chrome-extension://embopepfkojckgmldidcjbefilokcgmg/caa/styles.css");
+    </style>
+    <div id="troywell-caa" data-v-app=""><div class="content-app" data-v-52a8e116=""><!----></div></div></template></div></html>

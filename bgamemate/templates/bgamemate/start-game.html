@@ -1,0 +1,114 @@
+{% extends 'main.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'bgamemate/css/start-game.css' %}" />
+
+<table border="0" style="width: 100%">
+  <tr>
+    <td style="width: 5%"></td>
+    <td style="width: 90%; text-align: center;">
+      <p style="font-size: 150%;">
+        Начать новую игру
+      </p>
+    </td>
+    <td style="width: 5%"></td>
+  </tr>
+  <tr>
+    <td style="width: 5%"></td>
+    <td style="width: 90%; text-align: center;">
+        <form method="POST" action="">
+          {% csrf_token %}
+          {{ form.as_p }}
+  
+          <span style="display: block; margin: 30px 0 10px 0">Введите имена игроков:</span>
+          
+          <table border="0" style="width: 100%">
+
+            <tr class="player-row">
+              
+              <td style="width: 20%"></td>
+              <td style="text-align: center;">
+                {{ player_form }}
+              </td>
+              <td style="width: 20%; text-align: left;">
+                <img style="width: 25px; height: 25px; cursor: pointer;" src="{% static 'bgamemate/minus-icon.png' %}" onclick="removeParentRow(this)">
+              </td>
+              
+            </tr>
+            
+          </table>
+
+          <div>
+          <img style="width: 30px; height: 30px; cursor: pointer;" src="{% static 'bgamemate/plus-icon.png' %}" onclick="addNewPlayer()">
+          </div>
+          
+          <input class="button-start-game" style="margin: 20px 0 0 0" type="submit" value="Начать игру" />
+      </form>
+
+    </td>
+    <td style="width: 5%"></td>
+  </tr>
+
+  
+</table>
+
+
+
+<script>
+
+function addNewPlayer() {
+  
+  // Find the row to copy
+  const playerRows = document.querySelectorAll('.player-row');
+  const originalRow = playerRows[playerRows.length - 1];
+
+  // Clone the row
+  const clonedRow = originalRow.cloneNode(true);
+  clonedRow.querySelector('input').value = '';
+
+  // Insert the cloned row after the original row
+  originalRow.parentNode.insertBefore(clonedRow, originalRow.nextSibling);
+};
+
+
+function removeParentRow(element) {
+  const parentRow = element.closest('tr');
+  
+  // Check if it's the last row
+  const isLastRow = parentRow.parentNode.rows.length === 1;
+
+  // Remove the row only if it's not the last one
+  if (parentRow && !isLastRow) {
+    parentRow.remove();
+  }
+}
+
+
+
+
+
+// function addNewPlayer() {
+//   // Select the input element with class 'player'
+//   const inputElements = document.querySelectorAll('.player');
+//   const inputElement = inputElements[inputElements.length - 1];
+
+//   // Clone the input element
+//   const clonedInput = inputElement.cloneNode(true);
+
+//   // Clear the value of the cloned input (if needed)
+
+//   clonedInput.value = '';
+// //   clonedInput.style.display = 'block';
+//   clonedInput.classList.add('player');
+
+//   // Append the cloned input after the original input element
+//   inputElement.parentNode.insertBefore(clonedInput, inputElement.nextSibling);
+// }
+
+
+
+
+</script>
+
+{% endblock content %}

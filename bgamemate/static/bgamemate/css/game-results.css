@@ -1,0 +1,15 @@
+.game-finished {
+    font-size: 150%;
+}
+
+.players {
+    margin-top: 20px;
+}
+
+.players-header {
+    font-size: 115%;
+}
+
+.players-list {
+    margin: 7px 0 0 0;
+}

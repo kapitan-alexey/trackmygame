@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+.navbar a {
+    text-decoration: none; 
+    color: white;
+    font-size: 120%;
+}
+
+.logo {
+    float: left;
+    margin-right: 20px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}

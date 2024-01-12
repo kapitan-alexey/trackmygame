@@ -1,0 +1,39 @@
+.create-game-form {
+    width: 70px;
+}
+
+.player { 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    padding: 5px;
+    margin: 3px;
+}
+
+.button-start-game {
+    appearance: none;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    white-space: normal;
+    line-height: 1.2;
+    padding: 6px 16px;
+    height: 50px;
+    width: 140px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+  }

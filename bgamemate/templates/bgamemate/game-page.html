@@ -1,0 +1,92 @@
+{% extends 'main.html' %}
+
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'bgamemate/css/game-page.css' %}" />
+
+
+
+<table style="width: 100%; text-align: center;">
+  <tr><td><div class="turn-message"></div></td></tr>
+  <tr><td><span class="service-message"></span></td></tr>
+</table>
+
+<div style="margin-top: 10px; width: 80%; margin: auto">
+  <div class="jumbotron text-center">
+
+<table style="table-layout:fixed; width: 100%">
+
+  <tr>
+    <td style="width: 5%"></td>
+    <td style="width: 90%; text-align: center;">
+      <div class="timer">
+      <div>
+      <span class="minutes">00</span>:<span class="seconds">00</span>
+      </div>
+    </div>
+    </td>
+    <td style="width: 5%"></td>
+  </tr>
+  <tr>
+    <td style="width: 5%"></td>
+    <td style="width: 90%; text-align: center;">
+        <button class="btn btn-lg btn-success button-start" data-action="start">Начать ход</button>
+    </td>
+    <td style="width: 5%"></td>
+  </tr>
+  <tr>
+    <td style="width: 5%"></td>
+    <td style="width: 90%; text-align: center;">
+        <button class="btn btn-lg btn-warning button-pause" data-action="pause">Пауза</button>
+        <button class="btn finish-game button-finish" data-action="finish">Закончить<br/>игру</button>
+    </td>
+    <td style="width: 5%"></td>
+  </tr>
+  <tr>
+    <td style="width: 5%"></td>
+    <td style="width: 90%; text-align: center;">
+      
+    </td>
+    <td style="width: 5%"></td>
+  </tr>
+
+</table>
+</div>            
+</div>
+
+
+<div class="players">
+
+  <table border="0" class="player-results">
+    <tr>
+      <td style="width: 40%;">
+        &nbsp;
+      </td>
+      <td style="width: 30%;">
+        <div class="header">прошлый ход</div>
+      </td>
+      <td style="width: 30%;">
+        <div class="header">общее время</div>
+      </td>
+    </tr>
+  {% for player in players %}
+  {% if player.active %}
+    <tr class="active">
+      {% else %}
+    <tr>
+      {% endif %}
+      <td style="width: 40%;">
+        <div id={{player.id}} class="player-block">{{ player.name }}</div>
+      </td>
+      <td style="width: 30%;"><div class="last-time"></div></td>
+      <td style="width: 30%;"><div class="total-time"></div></td>
+    </tr>
+      {% endfor %}
+  </table>
+
+</div>
+
+<script src="{% static 'bgamemate/js/game-page.js' %}"></script>
+
+{% endblock content %}
