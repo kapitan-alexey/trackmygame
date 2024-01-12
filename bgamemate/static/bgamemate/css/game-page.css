@@ -12,6 +12,7 @@
     padding: 10px;
     margin: 5px;
     float: left;
+    text-align: left;
    }
 
 .active { 
@@ -126,7 +127,7 @@ table.player-results tr {
   display: inline-block;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   height: 100px;
   width: 116px;
@@ -152,7 +153,7 @@ table.player-results tr {
   display: inline-block;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   height: 100px;
   width: 116px;
