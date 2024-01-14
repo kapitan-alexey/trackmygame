@@ -72,9 +72,11 @@ def game_page(request, pk):
         }
         players.append(player_in_game)
     
+    turn_duration = GameSession.objects.get(id=pk).turn_duration
+
     context = {
         'players': players,
-        'duration': 10,
+        'duration': turn_duration,
     }
     return render(request, 'bgamemate/game-page.html', context)
 

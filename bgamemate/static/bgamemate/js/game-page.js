@@ -70,7 +70,7 @@ function getCookie(name) {
     timerTime++;
     const duration = parseInt(document.getElementById('duration').innerText);
     orange_limit = duration - Math.floor(duration/3);
-    if (timerTime == 7) {
+    if (timerTime == orange_limit) {
       changeColorToOrange()
     }
     else if (timerTime == duration) {

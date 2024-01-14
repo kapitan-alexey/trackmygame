@@ -129,7 +129,7 @@ USE_TZ = True
 
 import os
 
-STATIC_URL = '/static/bgmate/'
+STATIC_URL = '/static/'
 
 if DEBUG:
         STATICFILES_DIRS = [
