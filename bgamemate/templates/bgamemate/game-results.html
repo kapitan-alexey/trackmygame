@@ -1,10 +1,17 @@
 {% extends 'main.html' %}
-
-{% block content %}
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'bgamemate/css/game-results.css' %}" />
+{% block title %}
+Результаты игры
+{% endblock title %}
 
+{% block css_additional %}
+<link rel="stylesheet" type="text/css" href="{% static 'bgamemate/css/game-results.css' %}" />
+{% endblock css_additional %}
+
+
+
+{% block content %}
 
 <table style="width:100%; text-align: center; margin-top: 20px;">
 <tr>

@@ -1,5 +1,13 @@
-.create-game-form {
+/* .create-game-form {
     width: 70px;
+} */
+
+.game-form {
+    width: 160px;
+}
+
+.duration-form {
+    width: 23px;
 }
 
 .player { 

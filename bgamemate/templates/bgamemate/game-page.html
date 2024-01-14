@@ -1,11 +1,16 @@
 {% extends 'main.html' %}
-
-{% block content %}
 {% load static %}
 
+{% block title %}
+Страница игры
+{% endblock title %}
+
+{% block css_additional %}
 <link rel="stylesheet" type="text/css" href="{% static 'bgamemate/css/game-page.css' %}" />
+{% endblock css_additional %}
 
 
+{% block content %}
 
 <table style="width: 100%; text-align: center;">
   <tr><td><div class="turn-message"></div></td></tr>
@@ -20,7 +25,7 @@
   <tr>
     <td style="width: 5%"></td>
     <td style="width: 90%; text-align: center;">
-      <div class="timer">
+      <div class="timer tgreen">
       <div>
       <span class="minutes">00</span>:<span class="seconds">00</span>
       </div>
@@ -86,6 +91,8 @@
   </table>
 
 </div>
+
+<div id="duration">{{ duration }}</div>
 
 <script src="{% static 'bgamemate/js/game-page.js' %}"></script>
 

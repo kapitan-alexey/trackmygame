@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'bgamemate/css/style.css' %}" />
-    <title>Track My Game</title>
+    <title>{% block title %} {% endblock title %}</title>
+
+    {% block css_additional %} {% endblock css_additional %}
     
 </head>
 <body>

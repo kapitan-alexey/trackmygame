@@ -1,8 +1,17 @@
 {% extends 'main.html' %}
 
-{% block content %}
 {% load static %}
+
+{% block title %}
+Начать новую игру
+{% endblock title %}
+
+{% block css_additional %}
 <link rel="stylesheet" type="text/css" href="{% static 'bgamemate/css/start-game.css' %}" />
+{% endblock css_additional%}
+
+
+{% block content %}
 
 <table border="0" style="width: 100%">
   <tr>
@@ -83,31 +92,6 @@ function removeParentRow(element) {
     parentRow.remove();
   }
 }
-
-
-
-
-
-// function addNewPlayer() {
-//   // Select the input element with class 'player'
-//   const inputElements = document.querySelectorAll('.player');
-//   const inputElement = inputElements[inputElements.length - 1];
-
-//   // Clone the input element
-//   const clonedInput = inputElement.cloneNode(true);
-
-//   // Clear the value of the cloned input (if needed)
-
-//   clonedInput.value = '';
-// //   clonedInput.style.display = 'block';
-//   clonedInput.classList.add('player');
-
-//   // Append the cloned input after the original input element
-//   inputElement.parentNode.insertBefore(clonedInput, inputElement.nextSibling);
-// }
-
-
-
 
 </script>
 

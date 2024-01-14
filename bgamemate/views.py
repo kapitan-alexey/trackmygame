@@ -30,7 +30,6 @@ def game_start(request):
 
 def game_page(request, pk):
 
-
     if request.method == 'POST':
         request_data = json.loads(request.body)
         print('Got new request:', request_data)
@@ -74,7 +73,8 @@ def game_page(request, pk):
         players.append(player_in_game)
     
     context = {
-        'players': players
+        'players': players,
+        'duration': 10,
     }
     return render(request, 'bgamemate/game-page.html', context)
 

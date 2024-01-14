@@ -1,4 +1,4 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, TextInput, Select
 from .models import GameSession, Player
 
 class GameSessionForm(ModelForm):
@@ -6,13 +6,16 @@ class GameSessionForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['game'].label = "Игра"
-        self.fields['turn_duration'].label = "Длительность хода"
-        for visible in self.visible_fields():
-            visible.field.widget.attrs['class'] = 'create-game-form'
+        self.fields['turn_duration'].label = "Длительность хода (сек)"
 
     class Meta:
         model = GameSession
         fields = ['game', 'turn_duration']
+        widgets = {
+            'game': Select(attrs={'class': 'create-game-form game-form'}),
+            'turn_duration': TextInput(attrs={'class': 'create-game-form duration-form'}),
+        }
+
 
 class PlayerForm(ModelForm):
 

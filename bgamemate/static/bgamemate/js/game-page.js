@@ -1,8 +1,26 @@
 const turn_message = document.querySelector(".turn-message");
 const active_player = document.querySelector("tr.active > td > div")
 turn_message.innerText = active_player.innerText + ", твой ход!";
-// turn_message.innerText = "ghbdtn ghbdtn ghbdtn ghbdtnghbdtn твой ход!";
 
+
+function changeColorToGreen() {
+  const timer = document.querySelector('.timer');
+  timer.classList.remove('torange');
+  timer.classList.remove('tred');
+  timer.classList.add('tgreen');
+}
+
+function changeColorToOrange() {
+  const timer = document.querySelector('.timer');
+  timer.classList.remove('tgreen');
+  timer.classList.add('torange');
+}
+
+function changeColorToRed() {
+  const timer = document.querySelector('.timer');
+  timer.classList.remove('torange');
+  timer.classList.add('tred');
+}
 
 
 function getCookie(name) {
@@ -50,6 +68,16 @@ function getCookie(name) {
 
   const incrementTimer = () => {
     timerTime++;
+    const duration = parseInt(document.getElementById('duration').innerText);
+    orange_limit = duration - Math.floor(duration/3);
+    if (timerTime == 7) {
+      changeColorToOrange()
+    }
+    else if (timerTime == duration) {
+      changeColorToRed()
+      const service_message = document.querySelector(".service-message");
+      service_message.innerText = "время хода истекло, немедленно делай ход!";
+    }
     const numberMinutes = Math.floor(timerTime / 60);
     const numberSeconds = timerTime % 60;
     minutes.innerText = pad(numberMinutes);
@@ -62,7 +90,6 @@ btnStartElement.addEventListener('click', () => {
     isPaused = false;
     clearInterval(interval);
     btnPauseElement.innerText = 'Пауза';
-    console.log(`Total time elapsed: ${timerTime} seconds`);
 
     // sending data with player and his turn duration
     const active_player = document.querySelector("tr.active > td > div").id;
@@ -92,17 +119,11 @@ btnStartElement.addEventListener('click', () => {
         return response.json(); // Process response data if needed
     })
     .then(data => {
-        console.log(data);
-
         for (var key in data) {
           if (data.hasOwnProperty(key)) {
             var value = data[key];
-            // console.log(key);
-            // console.log(value['last_move_duration']);
-            // console.log(value['total_moves_duration']);
 
             const player_div = document.getElementById(key);
-            console.log("player_div:" + player_div)
 
             if (!player_div) {
               continue
@@ -115,9 +136,6 @@ btnStartElement.addEventListener('click', () => {
             if (pl_total_time) {
               pl_total_time.innerText = value['total_moves_duration'];
             }
-
-            // console.log(key['last_move_duration'] + ': ' + value);
-            // console.log(key['total_moves_duration'] + ': ' + value);
           }
         }
 
@@ -137,9 +155,6 @@ btnStartElement.addEventListener('click', () => {
         const turn_message = document.querySelector(".turn-message");
         turn_message.innerText = div_with_active_player.innerText + ", твой ход!";
 
-
-        console.log(data) // Write 'ok' to the console once response is received
-        // You can perform actions with the response data here if needed
     })
     .catch(error => {
         console.error('There was a problem with the fetch request:', error);
@@ -147,11 +162,11 @@ btnStartElement.addEventListener('click', () => {
 
     const service_message = document.querySelector(".service-message");
     service_message.innerText = "";
-    console.log('Service message must be clear now')
     minutes.innerText = '00';
     seconds.innerText = '00';
     timerTime = 0;
     pauseTime = 0;
+    changeColorToGreen()
     btnStartElement.innerText = 'Начать ход';
     btnStartElement.classList.remove('btn-danger');
     btnStartElement.classList.add('btn-success');
@@ -168,7 +183,6 @@ function finish_game() {
   else {
     const service_message = document.querySelector(".service-message");
     service_message.innerText = "чтобы закончить игру заверши свой ход";
-    console.log('please finish your move first');
   }
 };
 
@@ -199,7 +213,6 @@ function send_finish_request() {
     return response.json(); // Process response data if needed
   })
   .then(data => {
-    console.log('data is sent');
     // Redirect to another URL
     window.location.href = data['redirect'];
   })
