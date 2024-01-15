@@ -1,9 +1,9 @@
 .game-finished {
-    font-size: 150%;
+    font-size: 130%;
 }
 
 .players {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .players-header {
@@ -12,4 +12,41 @@
 
 .players-list {
     margin: 7px 0 0 0;
+}
+
+.player-block {
+    padding: 3px;
+}
+
+.stat-header {
+    margin: 10px 0 5px 0;
+    font-size: 130%;
+}
+
+.result-clmn {
+    width: 15%;
+    text-align: center;
+    padding: 5px;
+}
+
+.header-clmn {
+    font-size: 70%;
+}
+
+.data-clmn {
+    font-size: 80%;
+}
+
+.pl-data {
+    padding: 3px;
+}
+
+.top {
+    background-color: #2ea44f;
+    color: white;
+}
+
+.bottom {
+    background-color: #FF4742;
+    color: white;
 }

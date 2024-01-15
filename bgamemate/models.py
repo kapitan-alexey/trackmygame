@@ -35,7 +35,7 @@ class Player(models.Model):
 
 
 class GameSession(models.Model):
-    game = models.ForeignKey(Games, on_delete=models.CASCADE)
+    game = models.ForeignKey(Games, blank=True, null=True, on_delete=models.CASCADE)
     date_start = models.DateTimeField(auto_now_add=True)
     date_end = models.DateTimeField(blank=True, null=True)
     status = models.ForeignKey(GameSessionStatus, on_delete=models.CASCADE, default=3)

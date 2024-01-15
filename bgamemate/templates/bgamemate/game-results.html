@@ -21,19 +21,81 @@
         </div>
 
         <div class="players">
-            <span class="players-header"><b>Участники:</b></span>
             <div class="players-list">
-            {% for player in players %}
+            {% for player in players_data %}
             <div id={{player.id}} class="player-block">{{ player.name }}</div>
             {% endfor %}
             </div>
         </div>
-        <div>
-            <p>Длительность игры: {{ game_duration }}</p>
-        </div>
+        
 
 </td>
 </tr>
+</table>
+
+<table style="width: 100%">
+    <tr>
+        <td class="result-clmn" colspan="5">
+            <div class="stat-header">Статистика игры:</div>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 40%">
+            &nbsp;
+        </td>
+        <td class="result-clmn header-clmn">
+            самый быстрый ход
+        </td>
+        <td class="result-clmn header-clmn">
+            самый долгий ход
+        </td>
+        <td class="result-clmn header-clmn">
+            среднее время хода
+        </td>
+        <td class="result-clmn header-clmn">
+            общее время
+        </td>
+    </tr>
+    {% for data in players_data %}
+    <tr>
+        <td style="width: 40%">
+            <div class="pl-data">{{ data.name }}</div>
+        </td>
+        <td class="result-clmn">
+            {% if data.fastest == highlights.fastest %}
+            <div class="pl-data top">{{ data.fastest}}</div>
+            {% else %}
+            <div class="pl-data">{{ data.fastest}}</div>
+            {% endif %}
+        </td>
+        <td class="result-clmn">
+            {% if data.slowest == highlights.slowest %}
+            <div class="pl-data bottom">{{ data.slowest}}</div>
+            {% else %}
+            <div class="pl-data">{{ data.slowest}}</div>
+            {% endif %}
+        </td>
+        <td class="result-clmn">
+            {% if data.avg == highlights.avg %}
+            <div class="pl-data top">{{ data.avg}}</div>
+            {% else %}
+            <div class="pl-data">{{ data.avg}}</div>
+            {% endif %}
+        </td>
+        <td class="result-clmn">
+            {% if data.total == highlights.total %}
+            <div class="pl-data top">{{ data.total}}</div>
+            {% else %}
+            <div class="pl-data">{{ data.total}}</div>
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+    <tr>
+        <td class="result-clmn" colspan="5">
+            <div style="padding: 10px;">Продолжительность игры: {{ game_duration }}</div>
+        </td>
+    </tr>
 </table>
 
 <!-- <script src="{% static 'bgamemate/js/game-page.js' %}"></script> -->

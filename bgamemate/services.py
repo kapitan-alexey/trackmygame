@@ -88,7 +88,7 @@ def game_is_finished(pk: str):
 
 def get_gamesession_time_data(pk: str) -> Dict:
     gamesession = GameSession.objects.get(id=int(pk))
-    session_data ={}
+    session_data ={'game_duration': '00:00:00'}
     if gamesession.game_duration:
         session_data = {
             # 'game_started': gamesession.date_start.strftime("%y/%m/%d, %H:%M:%S"),
@@ -96,3 +96,22 @@ def get_gamesession_time_data(pk: str) -> Dict:
             'game_duration': str(datetime.timedelta(seconds=gamesession.game_duration)),
         }
     return session_data
+
+
+def get_player_result(pk, player):
+
+    timings = PlayerTiming.objects.filter(game_session=pk, player=player)
+    data = {}
+    moves = [time.turn_duration for time in timings]
+    if moves:
+        data['fastest'] = min(moves)
+        data['slowest'] = max(moves)
+        data['total'] = sum(moves)
+        data['avg'] = round(data['total']/len(moves))
+    else:
+        data['fastest'] = 0
+        data['slowest'] = 0
+        data['total'] = 0
+        data['avg'] = 0
+
+    return data

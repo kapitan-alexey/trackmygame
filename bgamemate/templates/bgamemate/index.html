@@ -1,5 +1,23 @@
 {% extends 'main.html' %}
 
 {% block content %}
-<h1>to create a game <a href="{% url 'start-game' %}">click on this lnk</a></h1>
+
+<table style="width: 100%; margin-top: 20px;">
+    <tr>
+        <td style="text-align: center; font-size: 130%; line-height: 1.4;">
+            Добро пожаловать на trackmygame.online!
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align:center">
+            <div style="padding: 10px; line-height: 1.3;">С помощью trackmygame вы можете с легкостью вести таймер своей игры, передавать право хода следующему игроку,
+                а также просматривать статистику вашей игры! <br/>
+            </div>
+            <div style="padding: 10px; line-height: 1.3;">
+                Чтобы начать игру нажмите на кнопку <a href="{% url 'start-game' %}">Начать игру</a> в верхнем меню.
+            </div>
+        </td>
+    </tr>
+</table>
+
 {% endblock content %}

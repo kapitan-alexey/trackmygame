@@ -5,14 +5,15 @@ class GameSessionForm(ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['game'].label = "Игра"
+        # self.fields['game'].label = "Игра"
         self.fields['turn_duration'].label = "Длительность хода (сек)"
 
     class Meta:
         model = GameSession
-        fields = ['game', 'turn_duration']
+        fields = ['turn_duration']
+        # fields = ['game', 'turn_duration']
         widgets = {
-            'game': Select(attrs={'class': 'create-game-form game-form'}),
+            # 'game': Select(attrs={'class': 'create-game-form game-form'}),
             'turn_duration': TextInput(attrs={'class': 'create-game-form duration-form'}),
         }
 
