@@ -1,4 +1,4 @@
-from django.forms import ModelForm, TextInput, Select
+from django.forms import ModelForm, TextInput, NumberInput
 from .models import GameSession, Player
 
 class GameSessionForm(ModelForm):
@@ -14,7 +14,7 @@ class GameSessionForm(ModelForm):
         # fields = ['game', 'turn_duration']
         widgets = {
             # 'game': Select(attrs={'class': 'create-game-form game-form'}),
-            'turn_duration': TextInput(attrs={'class': 'create-game-form duration-form'}),
+            'turn_duration': NumberInput(attrs={'class': 'create-game-form duration-form'}),
         }
 
 
@@ -30,3 +30,6 @@ class PlayerForm(ModelForm):
     class Meta:
         model= Player
         fields = ['name']
+        # widgets = {
+        #     'name': TextInput(attrs={'placeholder': 'Введите имя игрока', 'style': 'color: #2ea44f'}),
+        # }
