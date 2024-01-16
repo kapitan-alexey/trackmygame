@@ -6,7 +6,7 @@
     font-size: 230%;
     font-family: "Cuprum", sans-serif;
     font-weight: 700;
-    color: #57476b;
+    color: #274c77;
     margin: 15px 0px 0 0px;
 }
 
@@ -17,12 +17,13 @@
 .create-game label, span {
     font-family: "Cuprum", sans-serif;
     font-size: 130%;
+    color: #274c77;
 }
 
 .duration-form {
     width: 23px;
     border-radius: 6px;
-    border: 2px solid #57476b;
+    border: 2px solid #274c77;
     color: #000;
 }
 
@@ -40,21 +41,23 @@
     appearance: none;
 	border: none;
 	outline: none;
-	border-bottom: .2em solid #57476b;
-	background: #7c6598;
+	border-bottom: .2em solid #274c77;
+	/* background: #a6c7ec; */
+	background: #cdddf0;
 	border-radius: .2em .2em 0 0;
 	color: #000;
 }
 
 .player::placeholder {
-    color: #868686;
+    color: #274c77;
     font-size: 80%;
-    color: #e8e8e8;
+    /* color: #e8e8e8; */
 }
 
 .button-start-game {
     appearance: none;
-    background-color: #57476b;
+    /* background-color: #2ea44f; */
+    background-color: #274c77;
     border: 1px solid rgba(27, 31, 35, .15);
     border-radius: 6px;
     box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
