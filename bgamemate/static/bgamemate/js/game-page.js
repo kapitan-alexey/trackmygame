@@ -30,15 +30,19 @@ function getCookie(name) {
 }
 
 
+  const duration = parseInt(document.getElementById('duration').innerText);
   const btnStartElement = document.querySelector('[data-action="start"]');
   const btnPauseElement = document.querySelector('[data-action="pause"]');
   const minutes = document.querySelector('.minutes');
   const seconds = document.querySelector('.seconds');
+
   let timerTime = 0;
+  let timerTimeDown = parseInt(duration);
   let interval;
   let pauseTime = 0;
   let isRunning = false;
   let isPaused = false;
+  let CountUp = false;
 
   const start = () => {
     isRunning = true;
@@ -53,7 +57,7 @@ function getCookie(name) {
       isRunning = false;
       isPaused = true;
       clearInterval(interval);
-      pauseTime = timerTime;
+      pauseTime = timerTimeDown;
       btnPauseElement.innerText = 'Продолжить\nход';
     } else if (timerTime != 0) {
       isRunning = true;
@@ -66,20 +70,36 @@ function getCookie(name) {
     return (number < 10) ? '0' + number : number;
   }
 
+  const numberMinutes = Math.floor(timerTimeDown / 60);
+  const numberSeconds = timerTimeDown % 60;
+  minutes.innerText = pad(numberMinutes);
+  seconds.innerText = pad(numberSeconds);
+
   const incrementTimer = () => {
     timerTime++;
-    const duration = parseInt(document.getElementById('duration').innerText);
-    orange_limit = duration - Math.floor(duration/3);
-    if (timerTime == orange_limit) {
+    if (CountUp){
+      timerTimeDown++;
+    }
+    else {
+      timerTimeDown--;
+    }
+    if (timerTimeDown == 0) {
+      CountUp = true;
+    }
+    // const duration = parseInt(document.getElementById('duration').innerText);
+    // orange_limit = duration - Math.floor(duration/3);
+    if (timerTimeDown == 15) {
       changeColorToOrange()
     }
-    else if (timerTime == duration) {
+    else if (timerTimeDown == 0) {
       changeColorToRed()
+      let minus = document.querySelector('.count-negative');
+      minus.classList.remove('hidden');
       const service_message = document.querySelector(".service-message");
       service_message.innerText = "время хода истекло, немедленно делай ход!";
     }
-    const numberMinutes = Math.floor(timerTime / 60);
-    const numberSeconds = timerTime % 60;
+    const numberMinutes = Math.floor(timerTimeDown / 60);
+    const numberSeconds = timerTimeDown % 60;
     minutes.innerText = pad(numberMinutes);
     seconds.innerText = pad(numberSeconds);
   }
@@ -162,9 +182,17 @@ btnStartElement.addEventListener('click', () => {
 
     const service_message = document.querySelector(".service-message");
     service_message.innerText = "";
-    minutes.innerText = '00';
-    seconds.innerText = '00';
+
+    const numberMinutes = Math.floor(duration / 60);
+    const numberSeconds = duration % 60;
+    minutes.innerText = pad(numberMinutes);
+    seconds.innerText = pad(numberSeconds);
+
+    let minus = document.querySelector('.count-negative');
+    minus.classList.add('hidden');
+    CountUp = false
     timerTime = 0;
+    timerTimeDown = duration;
     pauseTime = 0;
     changeColorToGreen()
     btnStartElement.innerText = 'Начать ход';

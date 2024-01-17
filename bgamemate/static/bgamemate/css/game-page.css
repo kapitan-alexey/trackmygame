@@ -20,6 +20,17 @@
     color: white !important;
   }
 
+.count-negative {
+  font-size: 300%;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  color: #FF4742;
+}
+
+.hidden {
+  display: none;
+}
+
 .timer {
     font-family: "Roboto", serif;
     margin: auto;
@@ -60,7 +71,7 @@ table.player-results {
 }
 
 .last-time, .total-time {
-  font-weight: 100;
+  font-weight: 300;
   font-family: 'Roboto', sans-serif;
 }
 
