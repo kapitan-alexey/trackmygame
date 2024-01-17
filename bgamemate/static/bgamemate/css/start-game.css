@@ -2,12 +2,13 @@
     width: 70px;
 } */
 
+
 .new-game {
     font-size: 230%;
     font-family: "Cuprum", sans-serif;
     font-weight: 700;
     color: #274c77;
-    margin: 15px 0px 0 0px;
+    margin: 80px 0px 10px 0px;
 }
 
 .game-form {

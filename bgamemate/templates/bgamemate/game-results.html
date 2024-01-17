@@ -13,20 +13,26 @@
 
 {% block content %}
 
-<table style="width:100%; text-align: center; margin-top: 20px;">
+
+<div class="container">
+    <div class="element">
+
+
+
+<table class="tbl-game-finish">
 <tr>
     <td>
         <div>
         <span class="game-finished">Игра окончена!</span>
         </div>
 
-        <div class="players">
+        <!-- <div class="players">
             <div class="players-list">
             {% for player in players_data %}
             <div id={{player.id}} class="player-block">{{ player.name }}</div>
             {% endfor %}
             </div>
-        </div>
+        </div> -->
         
 
 </td>
@@ -59,7 +65,7 @@
     {% for data in players_data %}
     <tr>
         <td style="width: 40%">
-            <div class="pl-data">{{ data.name }}</div>
+            <div class="pl-name">{{ data.name }}</div>
         </td>
         <td class="result-clmn">
             {% if data.fastest == highlights.fastest %}
@@ -92,11 +98,16 @@
     </tr>
     {% endfor %}
     <tr>
-        <td class="result-clmn" colspan="5">
-            <div style="padding: 10px;">Продолжительность игры: {{ game_duration }}</div>
+        <td class="result-clmn" style="text-align: center;" colspan="5">
+            <div class="duration-block">Продолжительность игры: <span class="game-duration">{{ game_duration }}</span></div>
         </td>
     </tr>
+
 </table>
+
+</div>
+
+</div>
 
 <!-- <script src="{% static 'bgamemate/js/game-page.js' %}"></script> -->
 
