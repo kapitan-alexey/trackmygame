@@ -42,7 +42,7 @@ def game_page(request, pk):
                 }
         elif 'player_id' in request_data:
             save_player_timing(request_data, pk)
-            next_player = set_next_player(pk)
+            next_player = set_next_player(pk, request_data['player_id'])
             
             players_stats = get_players_stats(pk)
 

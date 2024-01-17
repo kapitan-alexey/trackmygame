@@ -51,11 +51,17 @@ def get_players_stats(pk: str):
 
 
 
-def set_next_player(pk: str) -> str:
+def set_next_player(pk: str, active_id: str) -> str:
     current_gamesession = GameSession.objects.get(id=int(pk))
+    
+    #  remove active=1 from last player
+    last_active_player = Player.objects.get(active=1, session=current_gamesession)
+    last_active_player.active = 0
+    last_active_player.save()
+    
     session_players = Player.objects.filter(session=current_gamesession).order_by('id')
     for index, player in enumerate(session_players):
-        if player.active:
+        if player.id == int(active_id):
             if index == len(session_players) - 1:
                 session_players[0].active = 1
                 session_players[0].save()
@@ -64,8 +70,9 @@ def set_next_player(pk: str) -> str:
                 session_players[index + 1].active = 1
                 session_players[index + 1].save()
                 next_player_id = session_players[index + 1].id
-            player.active = 0
-            player.save()
+            # player.active = 0
+            # player.save()
+            
             return str(next_player_id)
         
 

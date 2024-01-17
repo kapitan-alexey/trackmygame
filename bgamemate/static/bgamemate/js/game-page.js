@@ -204,6 +204,31 @@ btnStartElement.addEventListener('click', () => {
   }
 });
 
+
+
+const names = document.querySelectorAll('.player-block');
+names.forEach(name => {
+  name.addEventListener('click', () => {
+
+    if (isRunning || isPaused) {
+      const service_message = document.querySelector(".service-message");
+      service_message.innerText = "сначала заверши ход";
+      return
+    }
+    else {
+    const trs = document.querySelectorAll('tr');
+    trs.forEach(tr => {
+      tr.classList.remove('active');
+    });
+    const tr = name.closest('tr');
+    tr.classList.add('active');
+    const active_player = document.querySelector("tr.active > td > div")
+    turn_message.innerText = active_player.innerText + ", твой ход!";
+  }
+  });
+});
+
+
 function finish_game() {
   if (timerTime == 0) {
     send_finish_request()
