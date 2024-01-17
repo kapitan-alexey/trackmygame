@@ -7,7 +7,7 @@
 }
 
 .player-block { 
-    font-size: 100%; 
+    font-size: 120%; 
     font-family: "Cuprum", sans-serif;
     padding: 10px;
     margin: 5px;
@@ -29,7 +29,8 @@
   }
 
 .tgreen {
-  color: #2ea44f;
+  color: #274c77;
+  /* color: #2ea44f; */
 }
 
 .torange {
@@ -60,11 +61,13 @@ table.player-results {
 
 .last-time, .total-time {
   font-weight: 100;
+  font-family: 'Roboto', sans-serif;
 }
 
 table.player-results tr td div.header {
   padding: 7px;
   color: #274c77;
+  font-size: 109%;
 }
 
 table.player-results tr {
@@ -74,7 +77,8 @@ table.player-results tr {
 
 .button-start {
   appearance: none;
-  background-color: #2ea44f;
+  background-color: #274c77;
+  /* background-color: #2ea44f; */
   border: 1px solid rgba(27, 31, 35, .15);
   border-radius: 10px;
   box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
