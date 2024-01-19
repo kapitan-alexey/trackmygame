@@ -1,4 +1,5 @@
 from django.forms import ModelForm, TextInput, NumberInput
+from django.utils.translation import gettext_lazy as _
 from .models import GameSession, Player
 
 class GameSessionForm(ModelForm):
@@ -6,7 +7,7 @@ class GameSessionForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         # self.fields['game'].label = "Игра"
-        self.fields['turn_duration'].label = "Длительность хода (сек)"
+        self.fields['turn_duration'].label = _("Длительность хода (сек)")
 
     class Meta:
         model = GameSession
@@ -25,7 +26,7 @@ class PlayerForm(ModelForm):
         self.fields['name'].label = ""
         for visible in self.visible_fields():
             visible.field.widget.attrs['class'] = 'player'
-            visible.field.widget.attrs['placeholder'] = 'Введите имя игрока'
+            visible.field.widget.attrs['placeholder'] = _('Введите имя игрока')
 
     class Meta:
         model= Player

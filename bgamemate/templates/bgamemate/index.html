@@ -1,20 +1,21 @@
 {% extends 'main.html' %}
+{% load i18n %}
 
 {% block content %}
 
 <table style="width: 100%; margin-top: 20px;">
     <tr>
         <td style="text-align: center; font-size: 130%; line-height: 1.4;">
-            Добро пожаловать в<br/>trackmygame!
+            {% trans "Добро пожаловать в" %}<br/>trackmygame!
         </td>
     </tr>
     <tr>
         <td style="text-align:center">
-            <div style="padding: 10px; line-height: 1.3;">С помощью trackmygame вы можете с легкостью вести таймер своей игры, передавать право хода следующему игроку,
-                а также просматривать статистику вашей игры! <br/>
+            <div style="padding: 10px; line-height: 1.3;">{% trans "С помощью trackmygame вы можете с легкостью вести таймер своей игры, передавать право хода следующему игроку, а также просматривать статистику вашей игры!" %}<br/>
             </div>
             <div style="padding: 10px; line-height: 1.3;">
-                Чтобы начать игру нажмите на кнопку <a href="{% url 'start-game' %}">Начать игру</a> в верхнем меню.
+                {% url 'start-game' as the_url %}
+                {% blocktrans %}Чтобы начать игру нажмите на кнопку <a href="{{ the_url }}">начать игру</a> в верхнем меню.{% endblocktrans %}
             </div>
         </td>
     </tr>

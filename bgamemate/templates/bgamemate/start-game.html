@@ -1,6 +1,7 @@
 {% extends 'main.html' %}
 
 {% load static %}
+{% load i18n %}
 
 {% block title %}
 Начать новую игру
@@ -20,7 +21,7 @@
     <td style="width: 5%"></td>
     <td style="width: 90%; text-align: center;">
       <p class="new-game">
-        Новая игра
+        {% trans "Новая игра" %}
       </p>
     </td>
     <td style="width: 5%"></td>
@@ -32,7 +33,7 @@
           {% csrf_token %}
           {{ form.as_p }}
   
-          <span class="players-header">Введите имена игроков:</span>
+          <span class="players-header">{% trans "Введите имена игроков:" %}</span>
           
           <table border="0" style="width: 100%">
 
@@ -54,7 +55,7 @@
           <img style="width: 30px; height: 30px; cursor: pointer;" src="{% static 'bgamemate/plus-icon.png' %}" onclick="addNewPlayer()">
           </div>
           
-          <input class="button-start-game" style="margin: 20px 0 0 0" type="submit" value="Начать игру" />
+          <input class="button-start-game" style="margin: 20px 0 0 0" type="submit" value="{% trans 'Начать игру' %}" />
       </form>
 
     </td>

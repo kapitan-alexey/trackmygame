@@ -1,5 +1,6 @@
 {% extends 'main.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}
 Результаты игры
@@ -23,7 +24,7 @@
 <tr>
     <td>
         <div>
-        <span class="game-finished">Игра окончена!</span>
+        <span class="game-finished">{% trans "Игра окончена!" %}</span>
         </div>
 
         <!-- <div class="players">
@@ -39,10 +40,10 @@
 </tr>
 </table>
 
-<table style="width: 100%">
+<table style="width: 100%; padding: 10px;">
     <tr>
         <td class="result-clmn" colspan="5">
-            <div class="stat-header">Статистика игры:</div>
+            <div class="stat-header">{% trans "Статистика игры:" %}</div>
         </td>
     </tr>
     <tr>
@@ -50,16 +51,16 @@
             &nbsp;
         </td>
         <td class="result-clmn header-clmn">
-            самый быстрый ход
+            {% trans "самый быстрый ход" %}
         </td>
         <td class="result-clmn header-clmn">
-            самый долгий ход
+            {% trans "самый долгий ход" %}
         </td>
         <td class="result-clmn header-clmn">
-            среднее время хода
+            {% trans "среднее время хода" %}
         </td>
         <td class="result-clmn header-clmn">
-            общее время
+            {% trans "общее время" %}
         </td>
     </tr>
     {% for data in players_data %}
@@ -99,7 +100,7 @@
     {% endfor %}
     <tr>
         <td class="result-clmn" style="text-align: center;" colspan="5">
-            <div class="duration-block">Продолжительность игры: <span class="game-duration">{{ game_duration }}</span></div>
+            <div class="duration-block">{% trans "Продолжительность игры:" %}<span class="game-duration"> {{ game_duration }}</span></div>
         </td>
     </tr>
 

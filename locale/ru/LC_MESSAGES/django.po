@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-19 20:53+0600\n"
+"PO-Revision-Date: 2024-01-19 11:52+0600\n"
+"Last-Translator:   <Shmateyevne@gmail.com>\n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: bgamemate/forms.py:10
+msgid "Длительность хода (сек)"
+msgstr "Длительность хода (сек)"
+
+#: bgamemate/forms.py:29
+msgid "Введите имя игрока"
+msgstr "Введите имя игрока"
+
+#: bgamemate/templates/bgamemate/game-page.html:42
+#: bgamemate/templates/bgamemate/game-page.html:111
+msgid "Начать ход"
+msgstr "Начать игру"
+
+#: bgamemate/templates/bgamemate/game-page.html:49
+#: bgamemate/templates/bgamemate/game-page.html:113
+msgid "Пауза"
+msgstr "Пауза"
+
+#: bgamemate/templates/bgamemate/game-page.html:50
+msgid " Закончить<br/>игру "
+msgstr "Закончить<br/>игру"
+
+#: bgamemate/templates/bgamemate/game-page.html:73
+msgid " ты можешь передавать право хода</br>нажимая на имя игрока ниже "
+msgstr "ты можешь передавать право хода</br>нажимая на имя игрока ниже"
+
+#: bgamemate/templates/bgamemate/game-page.html:82
+msgid "прошлый ход"
+msgstr "прошлый ход"
+
+#: bgamemate/templates/bgamemate/game-page.html:85
+#: bgamemate/templates/bgamemate/game-results.html:63
+msgid "общее время"
+msgstr "общее время"
+
+#: bgamemate/templates/bgamemate/game-page.html:108
+msgid "чтобы закончить игру заверши свой ход"
+msgstr "чтобы закончить игру заверши свой ход"
+
+#: bgamemate/templates/bgamemate/game-page.html:109
+msgid "чтобы передать право хода сначала заверши свой ход"
+msgstr "чтобы передать право хода сначала заверши свой ход"
+
+#: bgamemate/templates/bgamemate/game-page.html:110
+msgid "время хода истекло, немедленно делай ход!"
+msgstr "время хода истекло, немедленно делай ход!"
+
+#: bgamemate/templates/bgamemate/game-page.html:112
+msgid "Закончить ход"
+msgstr "Закончить игру"
+
+#: bgamemate/templates/bgamemate/game-page.html:114
+msgid "Продолжить\\nход"
+msgstr ""
+"Продолжить\n"
+"ход"
+
+#: bgamemate/templates/bgamemate/game-page.html:115
+msgid "твой ход!"
+msgstr "твой ход!"
+
+#: bgamemate/templates/bgamemate/game-results.html:27
+msgid "Игра окончена!"
+msgstr "Игра окончена!"
+
+#: bgamemate/templates/bgamemate/game-results.html:46
+msgid "Статистика игры:"
+msgstr "Статистика игры:"
+
+#: bgamemate/templates/bgamemate/game-results.html:54
+msgid "самый быстрый ход"
+msgstr "самый быстрый ход"
+
+#: bgamemate/templates/bgamemate/game-results.html:57
+msgid "самый долгий ход"
+msgstr "самый долгий ход"
+
+#: bgamemate/templates/bgamemate/game-results.html:60
+msgid "среднее время хода"
+msgstr "среднее время хода"
+
+#: bgamemate/templates/bgamemate/game-results.html:103
+msgid "Продолжительность игры:"
+msgstr "Продолжительность игры:"
+
+#: bgamemate/templates/bgamemate/index.html:9
+msgid "Добро пожаловать в"
+msgstr "Добро пожаловать в"
+
+#: bgamemate/templates/bgamemate/index.html:14
+msgid ""
+"С помощью trackmygame вы можете с легкостью вести таймер своей игры, "
+"передавать право хода следующему игроку, а также просматривать статистику "
+"вашей игры!"
+msgstr ""
+"С помощью trackmygame вы можете с легкостью вести таймер своей игры, "
+"передавать право хода следующему игроку, а также просматривать статистику "
+"вашей игры!"
+
+#: bgamemate/templates/bgamemate/index.html:18
+#, python-format
+msgid ""
+"Чтобы начать игру нажмите на кнопку <a href=\"%(the_url)s\">начать игру</a> "
+"в верхнем меню."
+msgstr ""
+"Чтобы начать игру нажмите на кнопку <a href=\"%(the_url)s\">начать игру</a> "
+"в верхнем меню."
+
+#: bgamemate/templates/bgamemate/start-game.html:23
+msgid "Новая игра"
+msgstr "Новая игра"
+
+#: bgamemate/templates/bgamemate/start-game.html:35
+msgid "Введите имена игроков:"
+msgstr "Введите имена игрока"
+
+#: bgamemate/templates/bgamemate/start-game.html:57
+msgid "Начать игру"
+msgstr "Начать игру"
+
+#: bgmate/settings.py:124
+msgid "English"
+msgstr "Англ"
+
+#: bgmate/settings.py:125
+msgid "Russian"
+msgstr "Рус"
+
+#: templates/navbar.html:9
+msgid "начать игру"
+msgstr "начать игру"

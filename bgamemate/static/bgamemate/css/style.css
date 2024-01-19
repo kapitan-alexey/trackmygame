@@ -34,3 +34,8 @@ body {
     float: left;
     margin-right: 20px;
 }
+
+
+#service-messages {
+    display: none;
+}

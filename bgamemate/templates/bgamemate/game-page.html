@@ -1,5 +1,6 @@
 {% extends 'main.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}
 Страница игры
@@ -38,15 +39,15 @@
   <tr>
     <td style="width: 5%"></td>
     <td style="width: 90%; text-align: center;">
-        <button class="btn btn-lg btn-success button-start" data-action="start">Начать ход</button>
+        <button class="btn btn-lg btn-success button-start" data-action="start">{% trans "Начать ход" %}</button>
     </td>
     <td style="width: 5%"></td>
   </tr>
   <tr>
     <td style="width: 5%"></td>
     <td style="width: 90%; text-align: center;">
-        <button class="btn btn-lg btn-warning button-pause" data-action="pause">Пауза</button>
-        <button class="btn finish-game button-finish" data-action="finish">Закончить<br/>игру</button>
+        <button class="btn btn-lg btn-warning button-pause" data-action="pause">{% trans "Пауза" %}</button>
+        <button class="btn finish-game button-finish" data-action="finish">{% blocktrans %} Закончить<br/>игру {% endblocktrans %}</button>
     </td>
     <td style="width: 5%"></td>
   </tr>
@@ -69,7 +70,7 @@
     <tr>
       <td style="text-align: center;" colspan="3">
         <div style="margin: -10px 0 10px 0;">
-        ты можешь передавать право хода</br>нажимая на имя игрока ниже
+        {% blocktrans %} ты можешь передавать право хода</br>нажимая на имя игрока ниже {% endblocktrans %}
         </div>
       </td>
     </tr>
@@ -78,10 +79,10 @@
         &nbsp;
       </td>
       <td style="width: 30%;">
-        <div class="header">прошлый ход</div>
+        <div class="header">{% trans "прошлый ход" %}</div>
       </td>
       <td style="width: 30%;">
-        <div class="header">общее время</div>
+        <div class="header">{% trans "общее время" %}</div>
       </td>
     </tr>
   {% for player in players %}
@@ -102,7 +103,17 @@
 
 </div>
 
+<div id="service-messages">
 <div id="duration">{{ duration }}</div>
+<div id="finish-move">{% trans "чтобы закончить игру заверши свой ход" %}</div>
+<div id="transfer-move">{% trans "чтобы передать право хода сначала заверши свой ход" %}</div>
+<div id="time-is-up">{% trans "время хода истекло, немедленно делай ход!" %}</div>
+<div id="start-move">{% trans "Начать ход" %}</div>
+<div id="finish-your-move">{% trans "Закончить ход" %}</div>
+<div id="pause-move">{% trans "Пауза" %}</div>
+<div id="continue-move">{% trans "Продолжить\nход" %}</div>
+<div id="your-move">{% trans "твой ход!" %}</div>
+</div>
 
 <script src="{% static 'bgamemate/js/game-page.js' %}"></script>
 

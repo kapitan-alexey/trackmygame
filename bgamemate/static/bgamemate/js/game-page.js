@@ -1,7 +1,16 @@
 const turn_message = document.querySelector(".turn-message");
 const active_player = document.querySelector("tr.active > td > div")
-turn_message.innerText = active_player.innerText + ", твой ход!";
 
+const finish_your_move = document.getElementById('finish-move').innerText
+const start_move = document.getElementById('start-move').innerText
+const transfer_move = document.getElementById('transfer-move').innerText
+const time_is_up = document.getElementById('time-is-up').innerText
+const pause_move = document.getElementById('pause-move').innerText
+const your_move = document.getElementById('your-move').innerText
+const finish_the_move = document.getElementById('finish-your-move').innerText
+const continue_move = document.getElementById('continue-move').innerText
+
+turn_message.innerText = active_player.innerText + ", " + your_move;
 
 function changeColorToGreen() {
   const timer = document.querySelector('.timer');
@@ -47,7 +56,7 @@ function getCookie(name) {
   const start = () => {
     isRunning = true;
     interval = setInterval(incrementTimer, 1000);
-    btnStartElement.innerText = 'Закончить ход';
+    btnStartElement.innerText = finish_the_move;
     btnStartElement.classList.remove('btn-success');
     btnStartElement.classList.add('btn-danger');
   }
@@ -58,11 +67,11 @@ function getCookie(name) {
       isPaused = true;
       clearInterval(interval);
       pauseTime = timerTimeDown;
-      btnPauseElement.innerText = 'Продолжить\nход';
+      btnPauseElement.innerText = continue_move;
     } else if (timerTime != 0) {
       isRunning = true;
       interval = setInterval(incrementTimer, 1000);
-      btnPauseElement.innerText = 'Пауза';
+      btnPauseElement.innerText = pause_move;
     }
   }
 
@@ -96,7 +105,7 @@ function getCookie(name) {
       let minus = document.querySelector('.count-negative');
       minus.classList.remove('hidden');
       const service_message = document.querySelector(".service-message");
-      service_message.innerText = "время хода истекло, немедленно делай ход!";
+      service_message.innerText = time_is_up;
     }
     const numberMinutes = Math.floor(timerTimeDown / 60);
     const numberSeconds = timerTimeDown % 60;
@@ -109,7 +118,7 @@ btnStartElement.addEventListener('click', () => {
     isRunning = false;
     isPaused = false;
     clearInterval(interval);
-    btnPauseElement.innerText = 'Пауза';
+    btnPauseElement.innerText = pause_move;
 
     // sending data with player and his turn duration
     const active_player = document.querySelector("tr.active > td > div").id;
@@ -121,9 +130,7 @@ btnStartElement.addEventListener('click', () => {
 
     // Get the current URL
     const currentURL = window.location.href;
-    const parts = currentURL.split('/');
-    const pk = parts[parts.length - 2];
-    url_to_post = '/game-page/'+pk+'/'
+    url_to_post = currentURL
 
     fetch(url_to_post, { // it should send to this site, like a <form method="post" acction=""> does
         method: 'POST',
@@ -173,7 +180,7 @@ btnStartElement.addEventListener('click', () => {
         }
 
         const turn_message = document.querySelector(".turn-message");
-        turn_message.innerText = div_with_active_player.innerText + ", твой ход!";
+        turn_message.innerText = div_with_active_player.innerText + ", " + your_move;
 
     })
     .catch(error => {
@@ -195,7 +202,7 @@ btnStartElement.addEventListener('click', () => {
     timerTimeDown = duration;
     pauseTime = 0;
     changeColorToGreen()
-    btnStartElement.innerText = 'Начать ход';
+    btnStartElement.innerText = start_move;
     btnStartElement.classList.remove('btn-danger');
     btnStartElement.classList.add('btn-success');
     
@@ -212,7 +219,7 @@ names.forEach(name => {
 
     if (isRunning || isPaused) {
       const service_message = document.querySelector(".service-message");
-      service_message.innerText = "сначала заверши ход";
+      service_message.innerText = transfer_move;
       return
     }
     else {
@@ -223,7 +230,7 @@ names.forEach(name => {
     const tr = name.closest('tr');
     tr.classList.add('active');
     const active_player = document.querySelector("tr.active > td > div")
-    turn_message.innerText = active_player.innerText + ", твой ход!";
+    turn_message.innerText = active_player.innerText + ", " + your_move;
   }
   });
 });
@@ -235,7 +242,7 @@ function finish_game() {
   }
   else {
     const service_message = document.querySelector(".service-message");
-    service_message.innerText = "чтобы закончить игру заверши свой ход";
+    service_message.innerText = finish_your_move;
   }
 };
 
@@ -243,9 +250,7 @@ function send_finish_request() {
 
   // Get the current URL
   const currentURL = window.location.href;
-  const parts = currentURL.split('/');
-  const pk = parts[parts.length - 2];
-  url_to_post = '/game-page/'+pk+'/'
+  url_to_post = currentURL
 
   var context = {
     finish_the_game: 1
