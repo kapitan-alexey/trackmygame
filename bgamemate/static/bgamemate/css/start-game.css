@@ -49,6 +49,12 @@
 	color: #000;
 }
 
+.img-remove-player {
+    width: 25px; 
+    height: 25px; 
+    cursor: pointer;
+}
+
 .player::placeholder {
     color: #274c77;
     font-size: 80%;

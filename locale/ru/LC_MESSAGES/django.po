@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 20:53+0600\n"
+"POT-Creation-Date: 2024-01-20 15:16+0600\n"
 "PO-Revision-Date: 2024-01-19 11:52+0600\n"
 "Last-Translator:   <Shmateyevne@gmail.com>\n"
 "Language-Team: \n"
@@ -70,7 +70,7 @@ msgstr "время хода истекло, немедленно делай хо
 
 #: bgamemate/templates/bgamemate/game-page.html:112
 msgid "Закончить ход"
-msgstr "Закончить игру"
+msgstr "Закончить ход"
 
 #: bgamemate/templates/bgamemate/game-page.html:114
 msgid "Продолжить\\nход"
@@ -129,15 +129,15 @@ msgstr ""
 "Чтобы начать игру нажмите на кнопку <a href=\"%(the_url)s\">начать игру</a> "
 "в верхнем меню."
 
-#: bgamemate/templates/bgamemate/start-game.html:23
+#: bgamemate/templates/bgamemate/start-game.html:24
 msgid "Новая игра"
 msgstr "Новая игра"
 
-#: bgamemate/templates/bgamemate/start-game.html:35
+#: bgamemate/templates/bgamemate/start-game.html:36
 msgid "Введите имена игроков:"
 msgstr "Введите имена игрока"
 
-#: bgamemate/templates/bgamemate/start-game.html:57
+#: bgamemate/templates/bgamemate/start-game.html:58 templates/navbar.html:20
 msgid "Начать игру"
 msgstr "Начать игру"
 
@@ -149,6 +149,14 @@ msgstr "Англ"
 msgid "Russian"
 msgstr "Рус"
 
-#: templates/navbar.html:9
+#: templates/navbar.html:6
 msgid "начать игру"
 msgstr "начать игру"
+
+#: templates/navbar.html:21
+msgid "Регистрация"
+msgstr "Регистрация"
+
+#: templates/navbar.html:21
+msgid "скоро"
+msgstr "скоро"

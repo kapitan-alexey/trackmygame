@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 20:53+0600\n"
+"POT-Creation-Date: 2024-01-20 15:16+0600\n"
 "PO-Revision-Date: 2024-01-19 11:52+0600\n"
 "Last-Translator:   <Shmateyevne@gmail.com>\n"
 "Language-Team: \n"
@@ -125,15 +125,15 @@ msgstr ""
 "to start the game, click on the <a href=\"%(the_url)s\">start game</a> "
 "button in the top menu."
 
-#: bgamemate/templates/bgamemate/start-game.html:23
+#: bgamemate/templates/bgamemate/start-game.html:24
 msgid "Новая игра"
 msgstr "Start new game"
 
-#: bgamemate/templates/bgamemate/start-game.html:35
+#: bgamemate/templates/bgamemate/start-game.html:36
 msgid "Введите имена игроков:"
 msgstr "Enter players names"
 
-#: bgamemate/templates/bgamemate/start-game.html:57
+#: bgamemate/templates/bgamemate/start-game.html:58 templates/navbar.html:20
 msgid "Начать игру"
 msgstr "Start game"
 
@@ -145,6 +145,14 @@ msgstr "English_t"
 msgid "Russian"
 msgstr "Russian_t"
 
-#: templates/navbar.html:9
+#: templates/navbar.html:6
 msgid "начать игру"
 msgstr "start game"
+
+#: templates/navbar.html:21
+msgid "Регистрация"
+msgstr "Register"
+
+#: templates/navbar.html:21
+msgid "скоро"
+msgstr "soon"

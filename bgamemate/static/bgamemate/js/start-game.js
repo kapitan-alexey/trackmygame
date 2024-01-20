@@ -1,3 +1,6 @@
+const minus = document.getElementById('hidden').innerHTML
+
+
 function addNewPlayer() {
   
     // Find the row to copy
@@ -7,6 +10,7 @@ function addNewPlayer() {
     // Clone the row
     const clonedRow = originalRow.cloneNode(true);
     clonedRow.querySelector('input').value = '';
+    clonedRow.querySelector('.minus-player').innerHTML = minus
     
     // Insert the cloned row after the original row
     originalRow.parentNode.insertBefore(clonedRow, originalRow.nextSibling);

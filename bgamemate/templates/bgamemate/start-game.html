@@ -43,8 +43,8 @@
               <td style="text-align: center;">
                 {{ player_form }}
               </td>
-              <td style="width: 25%; text-align: left;">
-                <img style="width: 25px; height: 25px; cursor: pointer;" src="{% static 'bgamemate/minus-icon.png' %}" onclick="removeParentRow(this)">
+              <td class="minus-player" style="width: 25%; text-align: left;">
+                
               </td>
               
             </tr>
@@ -65,7 +65,7 @@
   
 </table>
 
-
+<div id="hidden" style="display: none"><img class="img-remove-player" src="{% static 'bgamemate/minus-icon.png' %}" onclick="removeParentRow(this)"></img></div>
 
 <script src="{% static 'bgamemate/js/start-game.js' %}"></script>
 

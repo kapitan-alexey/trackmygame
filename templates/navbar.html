@@ -1,11 +1,26 @@
+{% load static %}
 {% load i18n %}
+
 <div class="navbar">
 <div>
-<!-- <div class="logo">
-<a href="/">
-<span>TMG</span>
-</a>
-</div> -->
-<span><a href="{% url 'start-game' %}">{% trans "начать игру" %}</a></span>
+<!-- <span><a href="{% url 'start-game' %}">{% trans "начать игру" %}</a></span> -->
 </div>
 </div>
+
+  <div class="menu-bg" id="menu-bg"></div>
+
+
+  <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="{% url 'start-game' %}">{% trans "Начать игру" %}</a></li>
+      <li><span style="white-space: nowrap"><a class="menu__item" style="color: #adadad" href="#">{% trans "Регистрация" %}</a><sup class="soon-sup">{% trans "скоро" %}</sup></span></li>
+      <li><a class="menu__item" href="#">-</a></li>
+      <li><a class="menu__item" href="/ru/"><img class="lang-icon" src="{% static 'bgamemate/ru_icon.png' %}"></a></li>
+      <li><a class="menu__item" href="/en/"><img class="lang-icon" src="{% static 'bgamemate/en_icon.png' %}"></a></li>
+    </ul>
+  </div>
