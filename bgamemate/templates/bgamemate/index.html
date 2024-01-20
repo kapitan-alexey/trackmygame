@@ -1,5 +1,6 @@
 {% extends 'main.html' %}
 {% load i18n %}
+{% load static %}
 
 {% block content %}
 
@@ -20,5 +21,9 @@
         </td>
     </tr>
 </table>
+
+<div style="position: absolute; bottom: 0px;">
+<img style="width: 100%;" src="{% static 'bgamemate/index-bg.jpeg' %}">
+</div>
 
 {% endblock content %}
