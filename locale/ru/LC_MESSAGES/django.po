@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-20 15:16+0600\n"
+"POT-Creation-Date: 2024-01-21 18:13+0600\n"
 "PO-Revision-Date: 2024-01-19 11:52+0600\n"
 "Last-Translator:   <Shmateyevne@gmail.com>\n"
 "Language-Team: \n"
@@ -32,7 +32,7 @@ msgstr "Введите имя игрока"
 #: bgamemate/templates/bgamemate/game-page.html:42
 #: bgamemate/templates/bgamemate/game-page.html:111
 msgid "Начать ход"
-msgstr "Начать игру"
+msgstr "Начать ход"
 
 #: bgamemate/templates/bgamemate/game-page.html:49
 #: bgamemate/templates/bgamemate/game-page.html:113
@@ -106,11 +106,11 @@ msgstr "среднее время хода"
 msgid "Продолжительность игры:"
 msgstr "Продолжительность игры:"
 
-#: bgamemate/templates/bgamemate/index.html:9
+#: bgamemate/templates/bgamemate/index.html:10
 msgid "Добро пожаловать в"
 msgstr "Добро пожаловать в"
 
-#: bgamemate/templates/bgamemate/index.html:14
+#: bgamemate/templates/bgamemate/index.html:15
 msgid ""
 "С помощью trackmygame вы можете с легкостью вести таймер своей игры, "
 "передавать право хода следующему игроку, а также просматривать статистику "
@@ -120,13 +120,15 @@ msgstr ""
 "передавать право хода следующему игроку, а также просматривать статистику "
 "вашей игры!"
 
-#: bgamemate/templates/bgamemate/index.html:18
-#, python-format
+#: bgamemate/templates/bgamemate/index.html:19
 msgid ""
-"Чтобы начать игру нажмите на кнопку <a href=\"%(the_url)s\">начать игру</a> "
-"в верхнем меню."
+"Чтобы начать игру нажмите на кнопку <a style=\"color: #274c77; text-"
+"decoration: none; font-weight: 600; font-size: 120%%;\" "
+"href=\"%(the_url)s\">начать игру</a> в верхнем меню."
 msgstr ""
-"Чтобы начать игру нажмите на кнопку <a href=\"%(the_url)s\">начать игру</a> "
+"Чтобы начать игру нажмите на кнопку <a style=\"color: #274c77; text-"
+"decoration: none; font-weight: 600; font-size: 120%%;\" "
+"href=\"%(the_url)s\">начать игру</a> "
 "в верхнем меню."
 
 #: bgamemate/templates/bgamemate/start-game.html:24

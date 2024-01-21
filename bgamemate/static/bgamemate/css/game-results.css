@@ -5,7 +5,7 @@
 }
 
 .game-finished {
-    font-size: 180%;
+    font-size: 240%;
     color: #274c77;
 }
 
@@ -28,7 +28,7 @@
 
 .stat-header {
     margin: 10px 0 0px 0;
-    font-size: 115%;
+    font-size: 135%;
 }
 
 .result-clmn {

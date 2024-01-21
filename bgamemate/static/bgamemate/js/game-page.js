@@ -272,7 +272,9 @@ function send_finish_request() {
   })
   .then(data => {
     // Redirect to another URL
-    window.location.href = data['redirect'];
+    const currentURL = window.location.href;
+    const new_url = currentURL.replace('game-page', 'game-results');
+    window.location.href = new_url;
   })
   .catch(error => {
     console.error('There was a problem with the fetch request:', error);

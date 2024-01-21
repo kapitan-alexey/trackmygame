@@ -32,13 +32,14 @@ def game_page(request, pk):
 
     if request.method == 'POST':
         request_data = json.loads(request.body)
+        print('request:', request)
+        print('request:', request.build_absolute_uri())
         print('Got new request:', request_data)
         
         # check if game must be marked as finished
         if 'finish_the_game' in request_data:
             finish_game(pk)
             response = {
-                'redirect': f'/game-results/{pk}'
                 }
         elif 'player_id' in request_data:
             save_player_timing(request_data, pk)

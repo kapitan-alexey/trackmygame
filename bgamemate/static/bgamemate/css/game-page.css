@@ -62,6 +62,12 @@
   color: #FF4742;
 }
 
+.transfer-turn {
+  margin: -10px 0 10px 0;
+  font-size: 120%;
+  color: #274c77;
+}
+
 table.player-results {
   width: 100%;
   text-align: center;

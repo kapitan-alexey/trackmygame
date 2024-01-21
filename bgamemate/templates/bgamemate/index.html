@@ -4,19 +4,19 @@
 
 {% block content %}
 
-<table style="width: 100%; margin-top: 20px;">
+<table style="width: 100%; margin-top: 0px;">
     <tr>
-        <td style="text-align: center; font-size: 130%; line-height: 1.4;">
-            {% trans "Добро пожаловать в" %}<br/>trackmygame!
+        <td style="text-align: center; font-size: 150%; line-height: 1.4;">
+            {% trans "Добро пожаловать в" %}<br/>Track My Game!
         </td>
     </tr>
     <tr>
         <td style="text-align:center">
-            <div style="padding: 10px; line-height: 1.3;">{% trans "С помощью trackmygame вы можете с легкостью вести таймер своей игры, передавать право хода следующему игроку, а также просматривать статистику вашей игры!" %}<br/>
+            <div style="padding: 10px; line-height: 1.4; font-size: 110%">{% trans "С помощью trackmygame вы можете с легкостью вести таймер своей игры, передавать право хода следующему игроку, а также просматривать статистику вашей игры!" %}<br/>
             </div>
-            <div style="padding: 10px; line-height: 1.3;">
+            <div style="padding: 10px; line-height: 1.4; font-size: 110%;">
                 {% url 'start-game' as the_url %}
-                {% blocktrans %}Чтобы начать игру нажмите на кнопку <a href="{{ the_url }}">начать игру</a> в верхнем меню.{% endblocktrans %}
+                {% blocktrans %}Чтобы начать игру нажмите на кнопку <a style="color: #274c77; text-decoration: none; font-weight: 600; font-size: 120%;" href="{{ the_url }}">начать игру</a> в верхнем меню.{% endblocktrans %}
             </div>
         </td>
     </tr>
