@@ -22,17 +22,23 @@
 }
 
 .duration-form {
-    width: 23px;
-    height: 20px;
+    width: 90px;
+    height: 50px;
     border-radius: 6px;
     border: 2px solid #274c77;
-    color: #274c77;
     font-weight: 600;
     text-align: center;
-    font-size: 110%;
+    font-size: 120%;
     font-family: 'Roboto', sans-serif;
-    padding: 3px;
+    padding: 6px;
+    background: #274c77;
+    color: #fff;
+    margin-left: 10px;
 }
+
+/* select.duration-form {
+    padding: 20px;
+} */
 
 .players-header {
     display: block;
