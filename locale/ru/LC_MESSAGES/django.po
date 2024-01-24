@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-21 18:13+0600\n"
+"POT-Creation-Date: 2024-01-25 00:06+0600\n"
 "PO-Revision-Date: 2024-01-19 11:52+0600\n"
 "Last-Translator:   <Shmateyevne@gmail.com>\n"
 "Language-Team: \n"
@@ -21,11 +21,11 @@ msgstr ""
 "X-Generator: Poedit 3.4.2\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: bgamemate/forms.py:10
-msgid "Длительность хода (сек)"
-msgstr "Длительность хода (сек)"
+#: bgamemate/forms.py:22
+msgid "Длительность хода"
+msgstr "Длительность хода"
 
-#: bgamemate/forms.py:29
+#: bgamemate/forms.py:41
 msgid "Введите имя игрока"
 msgstr "Введите имя игрока"
 
@@ -82,6 +82,18 @@ msgstr ""
 msgid "твой ход!"
 msgstr "твой ход!"
 
+#: bgamemate/templates/bgamemate/game-page.html:122
+msgid "Ты уверен, что хочешь<br/>закончить игру?"
+msgstr "Ты уверен, что хочешь<br/>закончить игру?"
+
+#: bgamemate/templates/bgamemate/game-page.html:123
+msgid "Да"
+msgstr "Да"
+
+#: bgamemate/templates/bgamemate/game-page.html:124
+msgid "Нет"
+msgstr "Нет"
+
 #: bgamemate/templates/bgamemate/game-results.html:27
 msgid "Игра окончена!"
 msgstr "Игра окончена!"
@@ -121,6 +133,7 @@ msgstr ""
 "вашей игры!"
 
 #: bgamemate/templates/bgamemate/index.html:19
+#, python-format
 msgid ""
 "Чтобы начать игру нажмите на кнопку <a style=\"color: #274c77; text-"
 "decoration: none; font-weight: 600; font-size: 120%%;\" "
@@ -128,8 +141,7 @@ msgid ""
 msgstr ""
 "Чтобы начать игру нажмите на кнопку <a style=\"color: #274c77; text-"
 "decoration: none; font-weight: 600; font-size: 120%%;\" "
-"href=\"%(the_url)s\">начать игру</a> "
-"в верхнем меню."
+"href=\"%(the_url)s\">начать игру</a> в верхнем меню."
 
 #: bgamemate/templates/bgamemate/start-game.html:24
 msgid "Новая игра"

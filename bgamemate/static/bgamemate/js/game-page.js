@@ -281,9 +281,33 @@ function send_finish_request() {
   }); 
 }
 
+const FinishGameButton = document.getElementById('finish-game');
+  const overlay = document.getElementById('overlay');
+  const yesButton = document.getElementById('yes-button');
+  const noButton = document.getElementById('no-button');
+
+  FinishGameButton.addEventListener('click', () => {
+
+    if (timerTime == 0) {
+      overlay.style.display = 'flex';
+    }
+    else {
+      const service_message = document.querySelector(".service-message");
+      service_message.innerText = finish_your_move;
+    }      
+  });
+
+  yesButton.addEventListener('click', () => {
+      send_finish_request()
+  });
+
+  noButton.addEventListener('click', () => {
+      overlay.style.display = 'none';
+  });
+
 
 
 btnPauseElement.addEventListener('click', pause);
 
 const btnFinishElement = document.querySelector('[data-action="finish"]');
-btnFinishElement.addEventListener('click', finish_game);
+// btnFinishElement.addEventListener('click', finish_game);

@@ -202,3 +202,59 @@ table.player-results tr {
 #duration {
   display: none;
 }
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the dialog box */
+#dialog-box {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 140%;
+  color: #274c77;
+  background-color: white;
+  padding: 35px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+#yes-button, #no-button {
+  appearance: none;
+  background-color: #274c77;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 10px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 20px;
+  white-space: normal;
+  line-height: 1.2;
+  padding: 6px 16px;
+  height: 50px;
+  width: 80px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin: 5px;
+}

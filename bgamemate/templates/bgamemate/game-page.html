@@ -47,7 +47,7 @@
     <td style="width: 5%"></td>
     <td style="width: 90%; text-align: center;">
         <button class="btn btn-lg btn-warning button-pause" data-action="pause">{% trans "Пауза" %}</button>
-        <button class="btn finish-game button-finish" data-action="finish">{% blocktrans %} Закончить<br/>игру {% endblocktrans %}</button>
+        <button id="finish-game" class="btn finish-game button-finish" data-action="finish">{% blocktrans %} Закончить<br/>игру {% endblocktrans %}</button>
     </td>
     <td style="width: 5%"></td>
   </tr>
@@ -113,6 +113,16 @@
 <div id="pause-move">{% trans "Пауза" %}</div>
 <div id="continue-move">{% trans "Продолжить\nход" %}</div>
 <div id="your-move">{% trans "твой ход!" %}</div>
+</div>
+
+<!-- The overlay -->
+<div id="overlay">
+  <!-- The dialog box -->
+  <div id="dialog-box">
+      <p>{% blocktrans %}Ты уверен, что хочешь<br/>закончить игру?{% endblocktrans %}</p>
+      <button id="yes-button">{% trans "Да" %}</button>
+      <button id="no-button">{% trans "Нет" %}</button>
+  </div>
 </div>
 
 <script src="{% static 'bgamemate/js/game-page.js' %}"></script>
