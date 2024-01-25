@@ -75,6 +75,11 @@
       </td>
     </tr>
     <tr>
+      <td style="text-align: center;" colspan="3">
+        <button class="btn button-random" data-action="pause">{% trans "Рандом первого игрока" %}</button>
+      </td>
+    </tr>
+    <tr>
       <td style="width: 40%;">
         &nbsp;
       </td>
@@ -87,9 +92,9 @@
     </tr>
   {% for player in players %}
   {% if player.active %}
-    <tr class="active">
+    <tr class="pl-row active">
       {% else %}
-    <tr>
+    <tr class="pl-row">
       {% endif %}
       <td style="width: 40%;">
         <div id={{player.id}} class="player-block">{{ player.name }}</div>

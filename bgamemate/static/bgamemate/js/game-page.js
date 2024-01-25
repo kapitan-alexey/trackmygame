@@ -114,6 +114,13 @@ function getCookie(name) {
   }
 
 btnStartElement.addEventListener('click', () => {
+
+  const button_random = document.querySelector('.button-random');
+  if (button_random) {
+  button_random.classList.remove('button-random');
+  button_random.classList.add('hidden');
+  }
+
   if (isRunning || isPaused) {
     isRunning = false;
     isPaused = false;
@@ -234,6 +241,37 @@ names.forEach(name => {
   }
   });
 });
+
+function random_player() {
+
+  const players = document.querySelectorAll('tr.pl-row');
+  players.forEach(tr => {
+      tr.classList.add('active');
+    });
+
+  for (let i = 1; i < document.querySelectorAll("tr.active").length; i++) {
+
+    setTimeout(() => {
+    let players_active = document.querySelectorAll("tr.active");
+    const deactivate_player = players_active[Math.floor(Math.random() * players_active.length)];
+    deactivate_player.classList.remove("active");
+    console.log('deactivated');
+  }, i * 1000);
+
+  setTimeout(() => {
+    const start_player = document.querySelector("tr.active > td > div")
+    turn_message.innerText = start_player.innerText + ", " + your_move;
+  }, (document.querySelectorAll("tr.active").length - 1) * 1000);
+
+    
+}
+}
+
+const button_random = document.querySelector('.button-random');
+button_random.addEventListener('click', () => {
+  random_player()
+});
+
 
 
 function finish_game() {

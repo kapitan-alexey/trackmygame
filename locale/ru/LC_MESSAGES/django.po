@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-25 00:06+0600\n"
+"POT-Creation-Date: 2024-01-26 01:57+0600\n"
 "PO-Revision-Date: 2024-01-19 11:52+0600\n"
 "Last-Translator:   <Shmateyevne@gmail.com>\n"
 "Language-Team: \n"
@@ -30,12 +30,12 @@ msgid "Введите имя игрока"
 msgstr "Введите имя игрока"
 
 #: bgamemate/templates/bgamemate/game-page.html:42
-#: bgamemate/templates/bgamemate/game-page.html:111
+#: bgamemate/templates/bgamemate/game-page.html:116
 msgid "Начать ход"
 msgstr "Начать ход"
 
 #: bgamemate/templates/bgamemate/game-page.html:49
-#: bgamemate/templates/bgamemate/game-page.html:113
+#: bgamemate/templates/bgamemate/game-page.html:118
 msgid "Пауза"
 msgstr "Пауза"
 
@@ -47,50 +47,54 @@ msgstr "Закончить<br/>игру"
 msgid " ты можешь передавать право хода</br>нажимая на имя игрока ниже "
 msgstr "ты можешь передавать право хода</br>нажимая на имя игрока ниже"
 
-#: bgamemate/templates/bgamemate/game-page.html:82
+#: bgamemate/templates/bgamemate/game-page.html:79
+msgid "Рандом первого игрока"
+msgstr "Рандом первого игрока"
+
+#: bgamemate/templates/bgamemate/game-page.html:87
 msgid "прошлый ход"
 msgstr "прошлый ход"
 
-#: bgamemate/templates/bgamemate/game-page.html:85
+#: bgamemate/templates/bgamemate/game-page.html:90
 #: bgamemate/templates/bgamemate/game-results.html:63
 msgid "общее время"
 msgstr "общее время"
 
-#: bgamemate/templates/bgamemate/game-page.html:108
+#: bgamemate/templates/bgamemate/game-page.html:113
 msgid "чтобы закончить игру заверши свой ход"
 msgstr "чтобы закончить игру заверши свой ход"
 
-#: bgamemate/templates/bgamemate/game-page.html:109
+#: bgamemate/templates/bgamemate/game-page.html:114
 msgid "чтобы передать право хода сначала заверши свой ход"
 msgstr "чтобы передать право хода сначала заверши свой ход"
 
-#: bgamemate/templates/bgamemate/game-page.html:110
+#: bgamemate/templates/bgamemate/game-page.html:115
 msgid "время хода истекло, немедленно делай ход!"
 msgstr "время хода истекло, немедленно делай ход!"
 
-#: bgamemate/templates/bgamemate/game-page.html:112
+#: bgamemate/templates/bgamemate/game-page.html:117
 msgid "Закончить ход"
 msgstr "Закончить ход"
 
-#: bgamemate/templates/bgamemate/game-page.html:114
+#: bgamemate/templates/bgamemate/game-page.html:119
 msgid "Продолжить\\nход"
 msgstr ""
 "Продолжить\n"
 "ход"
 
-#: bgamemate/templates/bgamemate/game-page.html:115
+#: bgamemate/templates/bgamemate/game-page.html:120
 msgid "твой ход!"
 msgstr "твой ход!"
 
-#: bgamemate/templates/bgamemate/game-page.html:122
+#: bgamemate/templates/bgamemate/game-page.html:127
 msgid "Ты уверен, что хочешь<br/>закончить игру?"
 msgstr "Ты уверен, что хочешь<br/>закончить игру?"
 
-#: bgamemate/templates/bgamemate/game-page.html:123
+#: bgamemate/templates/bgamemate/game-page.html:128
 msgid "Да"
 msgstr "Да"
 
-#: bgamemate/templates/bgamemate/game-page.html:124
+#: bgamemate/templates/bgamemate/game-page.html:129
 msgid "Нет"
 msgstr "Нет"
 
