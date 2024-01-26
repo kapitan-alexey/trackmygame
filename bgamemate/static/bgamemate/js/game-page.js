@@ -245,26 +245,38 @@ names.forEach(name => {
 function random_player() {
 
   const players = document.querySelectorAll('tr.pl-row');
-  players.forEach(tr => {
-      tr.classList.add('active');
-    });
+  let i = 0;
+  function addActiveClass() {
+    if (i < players.length) {
+      players[i].classList.add('active');
+      i++;
+      setTimeout(addActiveClass, 100); // wait for 1 second before next iteration
+    }
+  }
+  addActiveClass();
 
-  for (let i = 1; i < document.querySelectorAll("tr.active").length; i++) {
-
-    setTimeout(() => {
-    let players_active = document.querySelectorAll("tr.active");
-    const deactivate_player = players_active[Math.floor(Math.random() * players_active.length)];
-    deactivate_player.classList.remove("active");
-    console.log('deactivated');
-  }, i * 1000);
+  const players_count = document.querySelectorAll("tr.pl-row").length
 
   setTimeout(() => {
-    const start_player = document.querySelector("tr.active > td > div")
-    turn_message.innerText = start_player.innerText + ", " + your_move;
-  }, (document.querySelectorAll("tr.active").length - 1) * 1000);
+    for (let i = 1; i < document.querySelectorAll("tr.active").length; i++) {
 
-    
-}
+      setTimeout(() => {
+      let players_active = document.querySelectorAll("tr.active");
+      const deactivate_player = players_active[Math.floor(Math.random() * players_active.length)];
+      deactivate_player.classList.remove("active");
+      console.log('deactivated');
+    }, i * 500);
+  
+    setTimeout(() => {
+      const start_player = document.querySelector("tr.active > td > div")
+      turn_message.innerText = start_player.innerText + ", " + your_move;
+    }, (document.querySelectorAll("tr.active").length - 1) * 500);
+  
+      
+  }
+  }, players_count * 100)
+  // }, 500)
+  
 }
 
 const button_random = document.querySelector('.button-random');
