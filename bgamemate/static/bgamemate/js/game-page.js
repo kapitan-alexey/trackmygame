@@ -244,6 +244,11 @@ names.forEach(name => {
 
 function random_player() {
 
+  const random_btn = document.getElementById("random-btn");
+  random_btn.disabled = true;
+  random_btn.classList.remove('button-random');
+  random_btn.classList.add('button-random-inactive');
+
   const players = document.querySelectorAll('tr.pl-row');
   let i = 0;
   function addActiveClass() {
@@ -271,6 +276,30 @@ function random_player() {
       const start_player = document.querySelector("tr.active > td > div")
       turn_message.innerText = start_player.innerText + ", " + your_move;
     }, (document.querySelectorAll("tr.active").length - 1) * 500);
+
+    setTimeout(() => {
+      const divElement = document.querySelector(".active");
+      const originalColor = divElement.style.backgroundColor;
+      // Change the background color to red with a smooth transition
+      divElement.style.transition = "background-color 1s ease-in-out";
+      divElement.style.backgroundColor = "#2EA44F";
+    }, (document.querySelectorAll("tr.active").length - 1) * 500 + 300);
+
+    setTimeout(() => {
+      const divElement = document.querySelector(".active");
+      divElement.style.backgroundColor = "";
+    }, (document.querySelectorAll("tr.active").length - 1) * 500 + 1500);
+    
+    setTimeout(() => {
+      const trs = document.querySelectorAll("tr.pl-row");
+      trs.forEach(tr => {
+        tr.style.transition = "";
+        tr.style.backgroundColor = "";
+      });
+      random_btn.classList.add('button-random');
+      random_btn.classList.remove('button-random-inactive');
+      random_btn.disabled = false;
+    }, (document.querySelectorAll("tr.active").length - 1) * 500 + 2500);
   
       
   }

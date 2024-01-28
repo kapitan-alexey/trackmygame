@@ -18,6 +18,14 @@
     color: white !important;
   }
 
+.first-player-green {
+  background-color: green;
+}
+
+.first-player-blue {
+  background-color: #274c77;
+}
+
 .count-negative {
   font-size: 300%;
   font-weight: 700;
@@ -266,6 +274,31 @@ table.player-results tr {
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 6px 16px;
+  height: 60px;
+  width: 240px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-random-inactive {
+  appearance: none;
+  background-color: #777777;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 10px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
   display: inline-block;
   font-family: 'Roboto', sans-serif;
   font-size: 17px;
