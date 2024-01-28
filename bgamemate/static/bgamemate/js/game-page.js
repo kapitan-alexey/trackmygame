@@ -244,6 +244,11 @@ names.forEach(name => {
 
 function random_player() {
 
+  const scrollingElement = document.scrollingElement || document.body;
+  scrollingElement.style.scrollBehavior = "smooth";
+  scrollingElement.scrollTo(0, scrollingElement.scrollHeight);
+
+
   const random_btn = document.getElementById("random-btn");
   random_btn.disabled = true;
   random_btn.classList.remove('button-random');
@@ -298,6 +303,9 @@ function random_player() {
       });
       random_btn.classList.add('button-random');
       random_btn.classList.remove('button-random-inactive');
+      const scrollingElement = document.scrollingElement || document.body;
+      scrollingElement.style.scrollBehavior = "smooth";
+      scrollingElement.scrollTo(0, 0);
       random_btn.disabled = false;
     }, (document.querySelectorAll("tr.active").length - 1) * 500 + 2500);
   
