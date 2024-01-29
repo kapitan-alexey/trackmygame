@@ -1,7 +1,7 @@
 .tbl-game-finish {
     width:100%; 
     text-align: center; 
-    margin: -100px 0 30px 0;
+    /* margin: -100px 0 30px 0; */
 }
 
 .game-finished {
@@ -71,19 +71,18 @@
 
 .duration-block {
     padding: 10px;
-    background: #274c77;
-    color: #fff;
-    width: 60%;
+    font-weight: 300;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 15px;
 }
 
 .game-duration {
     font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }
 
 .container {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -92,4 +91,33 @@
   .element {
     /* Your styles here */
     /* background: yellow; */
+  }
+
+  .btn-new-game {
+    appearance: none;
+    background-color: #274c77;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Cuprum", sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-weight: 400;
+    font-size: 26px;
+    white-space: normal;
+    line-height: 1.2;
+    padding: 6px 16px;
+    height: 80px;
+    width: 240px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
   }

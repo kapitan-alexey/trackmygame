@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-26 01:57+0600\n"
+"POT-Creation-Date: 2024-01-29 09:14+0600\n"
 "PO-Revision-Date: 2024-01-19 11:52+0600\n"
 "Last-Translator:   <Shmateyevne@gmail.com>\n"
 "Language-Team: \n"
@@ -119,6 +119,11 @@ msgstr "average move time"
 msgid "Продолжительность игры:"
 msgstr "Game duration:"
 
+#: bgamemate/templates/bgamemate/game-results.html:109
+#: bgamemate/templates/bgamemate/start-game.html:24
+msgid "Новая игра"
+msgstr "Start new game"
+
 #: bgamemate/templates/bgamemate/index.html:10
 msgid "Добро пожаловать в"
 msgstr "Welcome to"
@@ -142,10 +147,6 @@ msgstr ""
 "to start the game, click on the <a style=\"color: #274c77; text-decoration: "
 "none; font-weight: 600; font-size: 120%%;\" href=\"%(the_url)s\">start game</"
 "a> button in the top menu."
-
-#: bgamemate/templates/bgamemate/start-game.html:24
-msgid "Новая игра"
-msgstr "Start new game"
 
 #: bgamemate/templates/bgamemate/start-game.html:36
 msgid "Введите имена игроков:"

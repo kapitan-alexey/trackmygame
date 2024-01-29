@@ -14,6 +14,10 @@ function addNewPlayer() {
     
     // Insert the cloned row after the original row
     originalRow.parentNode.insertBefore(clonedRow, originalRow.nextSibling);
+    const scrollingElement = document.scrollingElement || document.body;
+    scrollingElement.style.scrollBehavior = "smooth";
+    scrollingElement.scrollBy(0, 100);
+
     clonedRow.querySelector('input').focus();
   
   };
